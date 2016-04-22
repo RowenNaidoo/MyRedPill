@@ -1,0 +1,7 @@
+C:\Projects\Readify\Readify.Solution\Readify.Test\bin\Debug\Readify.Test.dll
+C:\Projects\Readify\Readify.Solution\Readify.Test\bin\Debug\Readify.Test.pdb
+C:\Projects\Readify\Readify.Solution\Readify.Test\bin\Debug\Readify.Service.dll
+C:\Projects\Readify\Readify.Solution\Readify.Test\bin\Debug\Readify.Service.pdb
+C:\Projects\Readify\Readify.Solution\Readify.Test\obj\Debug\Readify.Test.csprojResolveAssemblyReference.cache
+C:\Projects\Readify\Readify.Solution\Readify.Test\obj\Debug\Readify.Test.dll
+C:\Projects\Readify\Readify.Solution\Readify.Test\obj\Debug\Readify.Test.pdb

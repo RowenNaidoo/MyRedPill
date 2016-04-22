@@ -12,17 +12,21 @@ namespace Readify.Service
     public interface IMyRedPill
     {
         [OperationContract]
-        string DoWork();
+        string ReverseWord(string word);
 
         [OperationContract]
-        TriangleType test();
-    }
+        long FibonacciNumber(long n);
 
+        [OperationContract]
+        TriangleType WhatShapeIsThis(int a, int b, int c);
+    }
+    
     [DataContract]
     public enum TriangleType
     {
-        a=1,
-        b=2,
-        c=3
+        Error,
+        Equilateral,
+        Isosceles,
+        Scalene
     }
 }
