@@ -24,9 +24,9 @@ namespace Readify.Service
     [DataContract]
     public enum TriangleType
     {
-        Error,
-        Equilateral,
-        Isosceles,
-        Scalene
+        Error=1,
+        Equilateral=2,
+        Isosceles=3,
+        Scalene=4
     }
 }
