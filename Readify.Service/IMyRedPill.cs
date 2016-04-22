@@ -25,15 +25,15 @@ namespace Readify.Service
     public enum TriangleType
     {
         [EnumMember]
-        Error=1,
+        Error,
 
         [EnumMember]
-        Equilateral=2,
+        Equilateral,
 
         [EnumMember]
-        Isosceles=3,
+        Isosceles,
 
         [EnumMember]
-        Scalene=4
+        Scalene
     }
 }
