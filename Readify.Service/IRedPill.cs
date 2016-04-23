@@ -10,7 +10,7 @@ namespace Readify.Service
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IMyRedPill" in both code and config file together.
     [ServiceContract(
         Name="IRedPill",
-        Namespace = "http://KnockKnock.readify.net/")]
+        Namespace = "http://KnockKnock.readify.net")]
     public interface IRedPill
     {
         [OperationContract(
@@ -38,7 +38,7 @@ namespace Readify.Service
     
     [DataContract(
         Name = "TriangleType",
-        Namespace = "http://KnockKnock.readify.net/")]
+        Namespace = "http://KnockKnock.readify.net")]
     public enum TriangleType
     {
         [EnumMember]
