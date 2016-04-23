@@ -20,12 +20,6 @@ namespace Readify.Service
 
         [OperationContract(
             IsOneWay = false,
-            Name = "ReverseWords")]
-        [FaultContract(typeof(ArgumentNullExceptionFault))]
-        string ReverseWords(string word);
-
-        [OperationContract(
-            IsOneWay = false,
             Name = "FibonacciNumber")]
         [FaultContract(typeof(ArgumentOutOfRangeExceptionFault))]
         long FibonacciNumber(long n);
@@ -34,6 +28,12 @@ namespace Readify.Service
             IsOneWay = false,
             Name = "WhatShapeIsThis")]
         TriangleType WhatShapeIsThis(int a, int b, int c);
+
+        [OperationContract(
+            IsOneWay = false,
+            Name = "ReverseWords")]
+        [FaultContract(typeof(ArgumentNullExceptionFault))]
+        string ReverseWords(string word);
     }
     
     [DataContract(
