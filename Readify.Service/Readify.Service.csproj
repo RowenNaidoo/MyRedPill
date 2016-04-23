@@ -59,13 +59,13 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MyRedPill.svc" />
+    <Content Include="RedPill.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IMyRedPill.cs" />
-    <Compile Include="MyRedPill.svc.cs">
-      <DependentUpon>MyRedPill.svc</DependentUpon>
+    <Compile Include="IRedPill.cs" />
+    <Compile Include="RedPill.svc.cs">
+      <DependentUpon>RedPill.svc</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

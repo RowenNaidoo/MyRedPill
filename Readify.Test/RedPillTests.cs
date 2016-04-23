@@ -8,21 +8,23 @@ namespace Readify.Test
     public class RedPillTests
     {
         [TestMethod]
+        [TestCategory("MyPillTests")]
         public void ReverseWordTest()
         {
             string word = "mytestword";
             string expectedResult = "drowtsetym";
 
-            var svc = new MyRedPill();
+            var svc = new RedPill();
             var result = svc.ReverseWords(word);
 
             Assert.AreEqual(expectedResult, result, "word reversal incorrect");
         }
 
         [TestMethod]
+        [TestCategory("MyPillTests")]
         public void FibonacciNumberTest()
         {
-            var svc = new MyRedPill();
+            var svc = new RedPill();
 
             var result = svc.FibonacciNumber(3);
             Assert.AreEqual(2, result, "Fibonacci calculation incorrect");
@@ -41,9 +43,10 @@ namespace Readify.Test
         }
 
         [TestMethod]
+        [TestCategory("MyPillTests")]
         public void FibonacciNumberExceptionTest()
         {
-            var svc = new MyRedPill();
+            var svc = new RedPill();
 
             try
             {
@@ -56,9 +59,10 @@ namespace Readify.Test
         }
 
         [TestMethod]
+        [TestCategory("MyPillTests")]
         public void WhatShapeIsThisTest()
         {
-            var svc = new MyRedPill();
+            var svc = new RedPill();
 
             //equilateral
             int a, b, c;
@@ -89,9 +93,10 @@ namespace Readify.Test
         }
 
         [TestMethod]
+        [TestCategory("MyPillTests")]
         public void WhatIsYourTokenTest()
         {
-            var svc = new MyRedPill();
+            var svc = new RedPill();
             var output = svc.WhatIsYourToken();
             Assert.AreEqual(output, new Guid("19c6e11c-a8d8-458f-a5fa-2dcfaa935684"));
         }
