@@ -9,7 +9,7 @@ namespace Readify.Service
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IMyRedPill" in both code and config file together.
     [ServiceContract(
-        Name="RedPill")]
+        Name="IRedPill")]
     public interface IRedPill
     {
         [OperationContract(
@@ -38,7 +38,7 @@ namespace Readify.Service
     }
     
     [DataContract(
-        Name = "WhatShapeIsThis")]
+        Name = "TriangleType")]
     public enum TriangleType
     {
         [EnumMember]
