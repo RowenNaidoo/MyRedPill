@@ -25,7 +25,7 @@ namespace Readify.Service
 
         [OperationContract]
         [FaultContract(typeof(ArgumentNullExceptionFault))]
-        string ReverseWords(string word);
+        string ReverseWords(string s);
     }
     
     [DataContract(
