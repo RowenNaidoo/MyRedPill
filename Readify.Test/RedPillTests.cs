@@ -87,5 +87,13 @@ namespace Readify.Test
             output = svc.WhatShapeIsThis(a, b, c);
             Assert.AreEqual(TriangleType.Error, output, "Error check failed");
         }
+
+        [TestMethod]
+        public void WhatIsYourTokenTest()
+        {
+            var svc = new MyRedPill();
+            var output = svc.WhatIsYourToken();
+            Assert.AreEqual(output, new Guid("19c6e11c-a8d8-458f-a5fa-2dcfaa935684"));
+        }
     }
 }

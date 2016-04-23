@@ -82,7 +82,7 @@ namespace Readify.Service
 
         public Guid WhatIsYourToken()
         {
-            return new Guid();
+            return new Guid("19c6e11c-a8d8-458f-a5fa-2dcfaa935684");
         }
     }
 }

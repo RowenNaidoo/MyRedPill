@@ -4,3 +4,9 @@ C:\Projects\Readify\Readify.Solution\Readify.Service\bin\Readify.Service.dll
 C:\Projects\Readify\Readify.Solution\Readify.Service\bin\Readify.Service.pdb
 C:\Projects\Readify\Readify.Solution\Readify.Service\obj\Debug\Readify.Service.dll
 C:\Projects\Readify\Readify.Solution\Readify.Service\obj\Debug\Readify.Service.pdb
+C:\Projects\Readify\deploy\Readify.Service\bin\Readify.Service.dll.config
+C:\Projects\Readify\deploy\Readify.Service\bin\Readify.Service.dll
+C:\Projects\Readify\deploy\Readify.Service\bin\Readify.Service.pdb
+C:\Projects\Readify\deploy\Readify.Service\obj\Debug\Readify.Service.csprojResolveAssemblyReference.cache
+C:\Projects\Readify\deploy\Readify.Service\obj\Debug\Readify.Service.dll
+C:\Projects\Readify\deploy\Readify.Service\obj\Debug\Readify.Service.pdb
