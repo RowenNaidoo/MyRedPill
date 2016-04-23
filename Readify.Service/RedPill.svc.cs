@@ -7,13 +7,18 @@ using System.Text;
 
 namespace Readify.Service
 {
+    [ServiceBehavior(Namespace="http://redpill-3.apphb.com/")]
     public class RedPill : IRedPill
     {
         public string ReverseWords(string s)
         {
             if(s == null)
             {
-                throw new FaultException("Value cannot be null.");
+                var fault = new ArgumentNullExceptionFault();
+
+                fault.FaultMessage = "Value cannot be null.";
+
+                throw new FaultException<ArgumentNullExceptionFault>(fault, fault.FaultMessage); 
             }
 
             var wordArray = s.ToCharArray();
@@ -44,9 +49,13 @@ namespace Readify.Service
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw new FaultException("Fib(>92) will cause a 64-bit integer overflow.");
+                var fault = new ArgumentOutOfRangeExceptionFault();
+
+                fault.FaultMessage = "Fib(>92) will cause a 64-bit integer overflow.";
+
+                throw new FaultException<ArgumentOutOfRangeExceptionFault>(fault, fault.FaultMessage);     
             }
             
 

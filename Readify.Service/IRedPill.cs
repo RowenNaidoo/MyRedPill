@@ -9,7 +9,8 @@ namespace Readify.Service
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IMyRedPill" in both code and config file together.
     [ServiceContract(
-        Name="IRedPill")]
+        Name="IRedPill",
+        Namespace="http://redpill-3.apphb.com/")]
     public interface IRedPill
     {
         [OperationContract(
@@ -22,12 +23,14 @@ namespace Readify.Service
             Action = "http://redpill-3.apphb.com/RedPill.svc/ReverseWords",
             IsOneWay = false,
             Name = "ReverseWords")]
+        [FaultContract(typeof(ArgumentNullExceptionFault))]
         string ReverseWords(string word);
 
         [OperationContract(
             Action = "http://redpill-3.apphb.com/RedPill.svc/FibonacciNumber",
             IsOneWay = false,
             Name = "FibonacciNumber")]
+        [FaultContract(typeof(ArgumentOutOfRangeExceptionFault))]
         long FibonacciNumber(long n);
 
         [OperationContract(
@@ -38,7 +41,8 @@ namespace Readify.Service
     }
     
     [DataContract(
-        Name = "TriangleType")]
+        Name = "TriangleType",
+        Namespace = "http://redpill-3.apphb.com/")]
     public enum TriangleType
     {
         [EnumMember]
@@ -52,5 +56,19 @@ namespace Readify.Service
 
         [EnumMember]
         Scalene
+    }
+
+    [DataContract]
+    public class ArgumentOutOfRangeExceptionFault
+    {
+        [DataMember]
+        public string FaultMessage { get; set; }
+    }
+
+    [DataContract]
+    public class ArgumentNullExceptionFault
+    {
+        [DataMember]
+        public string FaultMessage { get; set; }
     }
 }
