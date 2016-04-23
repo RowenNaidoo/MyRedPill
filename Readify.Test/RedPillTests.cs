@@ -14,7 +14,7 @@ namespace Readify.Test
             string expectedResult = "drowtsetym";
 
             var svc = new MyRedPill();
-            var result = svc.ReverseWord(word);
+            var result = svc.ReverseWords(word);
 
             Assert.AreEqual(expectedResult, result, "word reversal incorrect");
         }

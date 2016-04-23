@@ -12,13 +12,16 @@ namespace Readify.Service
     public interface IMyRedPill
     {
         [OperationContract]
-        string ReverseWord(string word);
+        string ReverseWords(string word);
 
         [OperationContract]
         long FibonacciNumber(long n);
 
         [OperationContract]
         TriangleType WhatShapeIsThis(int a, int b, int c);
+
+        [OperationContract]
+        Guid WhatIsYourToken();
     }
     
     [DataContract]

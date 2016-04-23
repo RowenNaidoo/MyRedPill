@@ -9,7 +9,7 @@ namespace Readify.Service
 {
     public class MyRedPill : IMyRedPill
     {
-        public string ReverseWord(string s)
+        public string ReverseWords(string s)
         {
             var wordArray = s.ToCharArray();
             Array.Reverse(wordArray);
@@ -58,9 +58,7 @@ namespace Readify.Service
 
         public TriangleType WhatShapeIsThis(int a, int b, int c)
         {
-            if((a + b > c) &&
-                (a + c > b) &&
-                (b + c > a))
+            if ((a + b > c) && (a + c > b) && (b + c > a))
             {
                 //triangle sides are valid
                 //check for equilateral
@@ -80,6 +78,11 @@ namespace Readify.Service
                 }
             }
             return TriangleType.Error;
+        }
+
+        public Guid WhatIsYourToken()
+        {
+            return new Guid();
         }
     }
 }
