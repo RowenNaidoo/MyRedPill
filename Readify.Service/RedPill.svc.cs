@@ -22,8 +22,67 @@ namespace Readify.Service
             }
 
             var wordArray = s.ToCharArray();
-            Array.Reverse(wordArray);
-            var output = new string(wordArray);
+            char[] reversedWord = new char[wordArray.Length];
+            //char[] temp = new char[wordArray.Length];
+            var tempString = new StringBuilder();
+            int rCounter = 0;
+            var cond = true;
+
+            for (var count = 0; count < wordArray.Length; count++)
+            {
+                if ((wordArray[count] == Convert.ToChar(" ")))
+                {
+                    if (count == wordArray.Length - 1)
+                    {
+                        reversedWord[rCounter] = wordArray[count];
+
+                        if (tempString.Length > 0)
+                        {
+                            _ReverseWord(tempString, reversedWord, ref rCounter);
+                            
+                            reversedWord[rCounter] = wordArray[count];
+                            rCounter++;
+
+                            tempString.Clear();
+                        }
+                    }
+                    else
+                    {
+                        if (tempString.Length > 0)
+                        {
+                            _ReverseWord(tempString, reversedWord, ref rCounter);
+
+                            reversedWord[rCounter] = wordArray[count];
+                            rCounter++;
+
+                            tempString.Clear();
+                        }
+                        else
+                        {
+                            reversedWord[rCounter] = wordArray[count];
+                            rCounter++;
+                        }
+                    }
+                    cond = false;
+                }
+                else
+                {
+                    cond = true;
+                }
+                
+                if (cond == true)//no space encountered
+                {
+                    tempString.Append(wordArray[count]);
+
+                    if (count == wordArray.Length - 1)
+                    {
+                        _ReverseWord(tempString, reversedWord, ref rCounter);
+                        tempString.Clear();
+                    }
+                }
+            }
+
+            var output = new string(reversedWord);
             return output;
         }
 
@@ -97,6 +156,20 @@ namespace Readify.Service
         public Guid WhatIsYourToken()
         {
             return new Guid("19c6e11c-a8d8-458f-a5fa-2dcfaa935684");
+        }
+
+        private void _ReverseWord(StringBuilder tempString, char[] reversedWord, ref int rCounter)
+        {
+            //reverse word in tempArray
+            var tempArray = tempString.ToString().ToCharArray();
+            Array.Reverse(tempArray);
+
+            //add to reversedArray
+            for (var ra = 0; ra < tempArray.Length; ra++)
+            {
+                reversedWord[rCounter] = tempArray[ra];
+                rCounter++;
+            }
         }
     }
 }

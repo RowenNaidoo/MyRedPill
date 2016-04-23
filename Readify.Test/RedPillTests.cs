@@ -11,13 +11,25 @@ namespace Readify.Test
         [TestCategory("MyPillTests")]
         public void ReverseWordTest()
         {
-            string word = "mytestword";
-            string expectedResult = "drowtsetym";
-
             var svc = new RedPill();
-            var result = svc.ReverseWords(word);
 
-            Assert.AreEqual(expectedResult, result, "word reversal incorrect");
+            var test = svc.ReverseWords(" ");
+            Assert.IsTrue(test.Equals(" "));
+
+            test = svc.ReverseWords("word");
+            Assert.IsTrue(test.Equals("drow"));
+
+            test = svc.ReverseWords(" my test string ");
+            Assert.IsTrue(test.Equals(" ym tset gnirts "));
+
+            test = svc.ReverseWords("my test string ");
+            Assert.IsTrue(test.Equals("ym tset gnirts "));
+
+            test = svc.ReverseWords(" my test string");
+            Assert.IsTrue(test.Equals(" ym tset gnirts"));
+
+            test = svc.ReverseWords("my  test   string");
+            Assert.IsTrue(test.Equals("ym  tset   gnirts"));
         }
 
         [TestMethod]
@@ -34,7 +46,7 @@ namespace Readify.Test
             catch(Exception ex)
             {
                 Assert.AreEqual("Value cannot be null.", ex.Message);
-            }
+            }            
         }
 
         [TestMethod]
