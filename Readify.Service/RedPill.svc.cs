@@ -49,7 +49,7 @@ namespace Readify.Service
                     }
                 }
             }
-            catch (Exception ex)
+            catch (OverflowException ex)
             {
                 var fault = new ArgumentOutOfRangeExceptionFault();
 
