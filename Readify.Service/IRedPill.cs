@@ -8,23 +8,37 @@ using System.Text;
 namespace Readify.Service
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IMyRedPill" in both code and config file together.
-    [ServiceContract]
+    [ServiceContract(
+        Name="RedPill")]
     public interface IRedPill
     {
-        [OperationContract]
+        [OperationContract(
+            Action = "http://redpill-3.apphb.com/RedPill.svc/WhatIsYourToken",
+            IsOneWay=false,
+            Name="WhatIsYourToken")]
         Guid WhatIsYourToken();
 
-        [OperationContract]
+        [OperationContract(
+            Action = "http://redpill-3.apphb.com/RedPill.svc/ReverseWords",
+            IsOneWay = false,
+            Name = "ReverseWords")]
         string ReverseWords(string word);
 
-        [OperationContract]
+        [OperationContract(
+            Action = "http://redpill-3.apphb.com/RedPill.svc/FibonacciNumber",
+            IsOneWay = false,
+            Name = "FibonacciNumber")]
         long FibonacciNumber(long n);
 
-        [OperationContract]
+        [OperationContract(
+            Action = "http://redpill-3.apphb.com/RedPill.svc/WhatShapeIsThis",
+            IsOneWay = false,
+            Name = "WhatShapeIsThis")]
         TriangleType WhatShapeIsThis(int a, int b, int c);
     }
     
-    [DataContract]
+    [DataContract(
+        Name = "WhatShapeIsThis")]
     public enum TriangleType
     {
         [EnumMember]
