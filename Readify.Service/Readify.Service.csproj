@@ -64,7 +64,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IRedPill.cs" />
-    <Compile Include="MessageContracts.cs" />
     <Compile Include="RedPill.svc.cs">
       <DependentUpon>RedPill.svc</DependentUpon>
     </Compile>

@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Readify.Service
 {
-    [ServiceBehavior(Namespace="http://redpill-3.apphb.com/")]
+    [ServiceBehavior(Namespace = "http://KnockKnock.readify.net/")]
     public class RedPill : IRedPill
     {
         public string ReverseWords(string s)

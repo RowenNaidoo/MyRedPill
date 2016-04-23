@@ -10,31 +10,31 @@ namespace Readify.Service
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IMyRedPill" in both code and config file together.
     [ServiceContract(
         Name="IRedPill",
-        Namespace="http://redpill-3.apphb.com/")]
+        Namespace = "http://KnockKnock.readify.net/")]
     public interface IRedPill
     {
         [OperationContract(
-            Action = "http://redpill-3.apphb.com/RedPill.svc/WhatIsYourToken",
+            Action = "http://KnockKnock.readify.net/RedPill.svc/WhatIsYourToken",
             IsOneWay=false,
             Name="WhatIsYourToken")]
         Guid WhatIsYourToken();
 
         [OperationContract(
-            Action = "http://redpill-3.apphb.com/RedPill.svc/ReverseWords",
+            Action = "http://KnockKnock.readify.net/RedPill.svc/ReverseWords",
             IsOneWay = false,
             Name = "ReverseWords")]
         [FaultContract(typeof(ArgumentNullExceptionFault))]
         string ReverseWords(string word);
 
         [OperationContract(
-            Action = "http://redpill-3.apphb.com/RedPill.svc/FibonacciNumber",
+            Action = "http://KnockKnock.readify.net/RedPill.svc/FibonacciNumber",
             IsOneWay = false,
             Name = "FibonacciNumber")]
         [FaultContract(typeof(ArgumentOutOfRangeExceptionFault))]
         long FibonacciNumber(long n);
 
         [OperationContract(
-            Action = "http://redpill-3.apphb.com/RedPill.svc/WhatShapeIsThis",
+            Action = "http://KnockKnock.readify.net/RedPill.svc/WhatShapeIsThis",
             IsOneWay = false,
             Name = "WhatShapeIsThis")]
         TriangleType WhatShapeIsThis(int a, int b, int c);
@@ -42,7 +42,7 @@ namespace Readify.Service
     
     [DataContract(
         Name = "TriangleType",
-        Namespace = "http://redpill-3.apphb.com/")]
+        Namespace = "http://KnockKnock.readify.net/")]
     public enum TriangleType
     {
         [EnumMember]
