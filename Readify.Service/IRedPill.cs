@@ -12,6 +12,9 @@ namespace Readify.Service
     public interface IRedPill
     {
         [OperationContract]
+        Guid WhatIsYourToken();
+
+        [OperationContract]
         string ReverseWords(string word);
 
         [OperationContract]
@@ -19,9 +22,6 @@ namespace Readify.Service
 
         [OperationContract]
         TriangleType WhatShapeIsThis(int a, int b, int c);
-
-        [OperationContract]
-        Guid WhatIsYourToken();
     }
     
     [DataContract]

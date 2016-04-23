@@ -22,6 +22,23 @@ namespace Readify.Test
 
         [TestMethod]
         [TestCategory("MyPillTests")]
+        public void ReverseWordExceptionTest()
+        {
+            string word = null;
+
+            var svc = new RedPill();
+            try
+            {
+                var result = svc.ReverseWords(word);
+            }
+            catch(Exception ex)
+            {
+                Assert.AreEqual("Value cannot be null.", ex.Message);
+            }
+        }
+
+        [TestMethod]
+        [TestCategory("MyPillTests")]
         public void FibonacciNumberTest()
         {
             var svc = new RedPill();

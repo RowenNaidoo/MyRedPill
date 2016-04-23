@@ -11,6 +11,11 @@ namespace Readify.Service
     {
         public string ReverseWords(string s)
         {
+            if(s == null)
+            {
+                throw new FaultException("Value cannot be null.");
+            }
+
             var wordArray = s.ToCharArray();
             Array.Reverse(wordArray);
             var output = new string(wordArray);
